@@ -1,79 +1,430 @@
-# VibeTree 🌲
+# VibeTree 🌳
 
-VibeTree is an intelligent planning, roadmapping, and knowledge-mapping platform. It organizes goals, projects, research logs, notes, and learning tracks into interactive, visually rich tree configurations.
+> Transform goals, ideas, projects, research, and learning journeys into interactive visual knowledge trees.
 
-Powered by an **ADK Multi-Agent System** and a local **Model Context Protocol (MCP) Server**, VibeTree automates the process of researching, drafting learning steps, mapping notes, and tracking deliverables.
+VibeTree is a modern planning, roadmapping, and knowledge-mapping platform designed to help individuals and teams organize information visually. Instead of managing disconnected notes, tasks, and documents, users build interconnected tree structures that represent goals, projects, learning paths, research topics, and knowledge networks.
 
-![VibeTree Dashboard Mockup](vibetree_dashboard.png)
-
----
-
-## Key Architectural Highlights
-- **VibeTree Dashboard**: Canvas-based interactive workspace displaying trees with collapsible branches, drag-and-drop node organization, markdown notes, real-time collaboration logs, progress widgets, and agent prompts.
-- **MCP Server Configuration**: Typescript server executing layout computations, search requests, and roadmap generations.
-- **7-Agent Pool (ADK)**: Tree Planning, Knowledge Organization, Learning Roadmap, Goal Tracking, Collaboration, Search & Research, and Workspace Management agents coordinating workflows via message logs.
+Powered by an **ADK Multi-Agent System** and a **Model Context Protocol (MCP) Server**, VibeTree intelligently assists users in planning, organizing, researching, tracking progress, and maintaining structured knowledge.
 
 ---
 
-## Folder Organization
+# ✨ Features
+
+## 🌲 Visual Tree-Based Workspace
+
+* Interactive tree creation and editing
+* Drag-and-drop node management
+* Infinite canvas workspace
+* Expandable and collapsible branches
+* Custom node types
+* Parent-child relationship mapping
+* Smart automatic layout generation
+
+## 🎯 Goal & Project Planning
+
+* Goal decomposition into actionable steps
+* Project breakdown structures
+* Milestone creation and tracking
+* Progress visualization
+* Task dependency mapping
+* Personal and team roadmaps
+
+## 📚 Knowledge Management
+
+* Structured note-taking
+* Markdown support
+* Research repositories
+* Topic linking and cross-references
+* Knowledge graph generation
+* Documentation management
+
+## 🎓 Learning Roadmaps
+
+* Learning path creation
+* Skill-tree generation
+* Curriculum planning
+* Course and resource organization
+* Progress tracking
+* Study planning
+
+## 🤝 Collaboration
+
+* Shared workspaces
+* Team collaboration
+* Activity timeline
+* Change history
+* Comments and discussions
+* Workspace permissions
+
+## 📤 Import & Export
+
+* JSON export/import
+* Markdown export
+* PDF generation
+* Backup and restore
+* Workspace migration
+
+---
+
+# 🏗 Architecture Overview
+
+VibeTree follows a modular architecture built around:
+
+### 1. ADK Multi-Agent System
+
+Specialized AI agents coordinate planning, organization, and automation.
+
+### 2. MCP Server
+
+Provides tool execution, context sharing, search capabilities, and roadmap generation.
+
+### 3. Modern Full-Stack Dashboard
+
+Interactive React application with real-time updates and visual tree rendering.
+
+---
+
+# 🤖 Agent Ecosystem
+
+## Tree Planning Agent
+
+Responsible for:
+
+* Goal decomposition
+* Project structure generation
+* Branch optimization
+* Dependency mapping
+
+## Knowledge Organization Agent
+
+Responsible for:
+
+* Categorization
+* Information structuring
+* Topic linking
+* Knowledge clustering
+
+## Learning Roadmap Agent
+
+Responsible for:
+
+* Curriculum planning
+* Skill progression
+* Resource recommendations
+* Learning milestones
+
+## Goal Tracking Agent
+
+Responsible for:
+
+* Progress monitoring
+* Milestone tracking
+* Completion analytics
+* Performance insights
+
+## Collaboration Agent
+
+Responsible for:
+
+* Shared workspace coordination
+* Activity monitoring
+* Change management
+* Team workflows
+
+## Search & Research Agent
+
+Responsible for:
+
+* Information retrieval
+* Research organization
+* Resource indexing
+* Search optimization
+
+## Workspace Management Agent
+
+Responsible for:
+
+* Workspace creation
+* Permission control
+* Data management
+* System administration
+
+---
+
+# 🔌 MCP Server Responsibilities
+
+The MCP Server acts as the central execution layer and provides:
+
+* Context management
+* Tool orchestration
+* Search services
+* Layout generation
+* Tree optimization
+* Knowledge indexing
+* Activity logging
+* Workspace synchronization
+
+---
+
+# 📂 Project Structure
+
 ```text
-vibe/
-├── README.md                 # Setup and run commands (This file)
-├── package.json              # App settings & React dependency maps
-├── tsconfig.json             # TypeScript compiler parameters
-├── vite.config.ts            # Vite configuration mapping server to port 3000
-├── docs/                     # Comprehensive architectural documentation
-│   ├── db_schema.md          # PostgreSQL schemas
-│   ├── api_spec.md           # API specification endpoints
-│   ├── security.md           # Authentication and audit details
-│   ├── architecture.md       # ADK and MCP workflows
-│   └── deployment.md         # Docker configurations & GitHub CI/CD workflows
-├── src/                      # React Frontend Source Code
-│   ├── main.tsx              # React mounting root
-│   ├── App.tsx               # Primary dashboard layout
-│   ├── index.css             # High-fidelity dark-themed layout styling
-│   ├── types/                # Types for nodes, trees, and activities
-│   └── components/           # UI Elements (VisualCanvas, NodeEditor, etc.)
-├── mcp-server/               # Model Context Protocol code templates
-└── agents/                   # Agent logic and orchestrator files
+vibetree/
+│
+├── README.md
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+├── .env.example
+│
+├── docs/
+│   ├── architecture.md
+│   ├── api_spec.md
+│   ├── db_schema.md
+│   ├── security.md
+│   ├── deployment.md
+│   └── workflows.md
+│
+├── src/
+│   ├── main.tsx
+│   ├── App.tsx
+│   ├── routes/
+│   ├── pages/
+│   ├── layouts/
+│   ├── hooks/
+│   ├── services/
+│   ├── store/
+│   ├── types/
+│   ├── utils/
+│   ├── styles/
+│   └── components/
+│
+├── agents/
+│   ├── planner/
+│   ├── knowledge/
+│   ├── roadmap/
+│   ├── tracker/
+│   ├── collaboration/
+│   ├── research/
+│   └── workspace/
+│
+├── mcp-server/
+│   ├── server.ts
+│   ├── tools/
+│   ├── resources/
+│   ├── prompts/
+│   └── middleware/
+│
+├── database/
+│   ├── migrations/
+│   ├── seeds/
+│   └── schema.sql
+│
+└── tests/
+    ├── unit/
+    ├── integration/
+    └── e2e/
 ```
 
 ---
 
-## Quickstart Setup Guide
+# 🗄 Database Design
 
-### 1. Requirements
-Ensure you have the following installed on your machine:
-- **Node.js**: v18.x or later
-- **npm**: v9.x or later
+Core entities:
 
-### 2. Installation
-Clone the repository and install the dependencies:
+* Users
+* Workspaces
+* Trees
+* Nodes
+* Notes
+* Roadmaps
+* Milestones
+* Activities
+* Collaborators
+* Agent Logs
+
+Database: **PostgreSQL**
+
+Key relationships:
+
+```text
+User
+ └── Workspace
+      └── Tree
+           └── Node
+                └── Note
+
+Workspace
+ └── Collaborators
+
+Tree
+ └── Milestones
+
+Workspace
+ └── Activity Logs
+```
+
+---
+
+# 🔒 Security Features
+
+* JWT Authentication
+* Role-Based Access Control (RBAC)
+* Input Validation
+* Rate Limiting
+* Audit Logging
+* Secure API Design
+* XSS Protection
+* CSRF Protection
+* Secure Session Management
+* Encrypted Environment Variables
+
+---
+
+# 🎨 Dashboard Modules
+
+### Workspace Overview
+
+Quick summary of projects, goals, and activity.
+
+### Tree Explorer
+
+Browse all trees and roadmaps.
+
+### Visual Canvas
+
+Interactive tree rendering and editing.
+
+### Node Editor
+
+Edit content, notes, metadata, and links.
+
+### Notes Panel
+
+Markdown-based note-taking system.
+
+### Progress Dashboard
+
+Track goals, milestones, and completion status.
+
+### Collaboration Center
+
+Manage teams, comments, and workspace sharing.
+
+### Activity Timeline
+
+View all recent changes and events.
+
+---
+
+# 🚀 Getting Started
+
+## Prerequisites
+
+* Node.js 18+
+* npm 9+
+* PostgreSQL 15+
+
+## Installation
+
 ```bash
-cd vibe
+git clone https://github.com/yourusername/vibetree.git
+
+cd vibetree
+
 npm install
 ```
 
-### 3. Running the Project
-To launch the VibeTree frontend dashboard and mock server locally on port 3000:
+## Environment Setup
+
+Create a `.env` file:
+
+```env
+DATABASE_URL=
+JWT_SECRET=
+MCP_SERVER_URL=
+```
+
+## Start Development Server
+
 ```bash
 npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000) in your web browser.
+
+Application runs at:
+
+http://localhost:3000
 
 ---
 
-## Development Workflow & Testing Strategy
+# 🧪 Testing
 
-### Code Guidelines
-- **Type Safety**: Maintain strict TypeScript interfaces in `src/types/` for all nodes, coordinates, and agent messages.
-- **Styling**: Utilize Vanilla CSS variables in `src/index.css` for light/dark theme swapping.
+Run unit tests:
 
-### Testing Strategy
-1. **Linting**:
-   Ensure code conforms to formatting standards:
-   ```bash
-   npm run lint --if-present
-   ```
-2. **Testing Node Layouts**:
-   Run unit tests (via Vitest/Jest) on coordinates calculations for rendering balanced branches.
+```bash
+npm test
+```
+
+Run integration tests:
+
+```bash
+npm run test:integration
+```
+
+Run end-to-end tests:
+
+```bash
+npm run test:e2e
+```
+
+Lint project:
+
+```bash
+npm run lint
+```
+
+---
+
+# 🚢 Deployment
+
+## Docker
+
+```bash
+docker compose up -d
+```
+
+## Production Build
+
+```bash
+npm run build
+```
+
+Deploy using:
+
+* Vercel
+* Netlify
+* Railway
+* Render
+* AWS
+* Azure
+* DigitalOcean
+
+---
+
+# 🔄 End-to-End Workflow
+
+1. User creates a workspace.
+2. User creates a visual tree.
+3. Nodes are added to represent goals, ideas, tasks, or knowledge.
+4. Agents analyze and organize the structure.
+5. Roadmaps and milestones are generated.
+6. Team members collaborate and contribute.
+7. Progress is tracked automatically.
+8. Knowledge grows into a connected visual system.
+9. Users export or share completed trees.
+
+---
+
+# 🌟 Vision
+
+VibeTree aims to become the operating system for structured thinking, helping users transform scattered information into organized knowledge, actionable plans, and meaningful progress through visual tree-based workflows.
