@@ -65,7 +65,7 @@ Powered by an **ADK Multi-Agent System** and a **Model Context Protocol (MCP) Se
 * Workspace migration
 
 ---
-
+<img width="1906" height="911" alt="Image" src="https://github.com/user-attachments/assets/f0db54fa-562f-4834-85fd-7347999cdd59" />
 # 🏗 Architecture Overview
 
 VibeTree follows a modular architecture built around:
